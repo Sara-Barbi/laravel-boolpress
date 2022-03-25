@@ -29,4 +29,4 @@ Route::middleware('auth')   //solo se utente è loggato
 //indirizzare sempre sul front
 Route::get('{any?}', function () {    //any=qualsiasi cosa  ?= potrebbe anche non esserci nulla (/)
     return view('front');
-})->where("any",".+");
+})->where("any",".*");

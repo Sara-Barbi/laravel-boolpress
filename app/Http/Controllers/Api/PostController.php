@@ -12,7 +12,7 @@ class PostController extends Controller
 {
    public function index(){
       //RICHIAMO POST CON RELAZIONI
-   $posts = Post::with('category', 'tags')->get();
+   $posts = Post::with(['category', 'tags'])->get();
    return response()->json($posts);
 }
 
@@ -48,7 +48,7 @@ class PostController extends Controller
       //RICHIAMO POST che hanno uno slug (in teoria tutti) con all'interno category e tags,(come in index),prendi il primo (quello cliccato)
    
       $posts = Post::where("slug",$slug)->with(['category', 'tags'])->first();
-   return response()->json($post);                                            //dai come risultato un formato json
+      return response()->json($post);                                            //dai come risultato un formato json
 }
    
 }

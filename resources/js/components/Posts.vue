@@ -21,7 +21,7 @@
                 </ul>
                 <p><strong class="info_smart">Time Cooking:</strong> {{post.time_cooking}}</p>  
                <!--link per la rotta del singolo post-->
-               <button><router-link :to="{name:'single-post',params:{slug:post.slug}}">Visualizza la Ricetta</router-link></button>
+               <li><router-link :to="{ name: 'home' }">home</router-link></li>
             </div>
         </div>
     </div>
@@ -29,7 +29,7 @@
 
 <script>
 export default {
-    name:"Main",
+    name:"Posts",
     data(){
         return{
             posts:[]
