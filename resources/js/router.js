@@ -27,7 +27,4 @@ const router = new VueRouter({
         },
     ]
 });
-axios
-.get(`/api/posts/${this.$route.params.slug}`);
-
 export default router
