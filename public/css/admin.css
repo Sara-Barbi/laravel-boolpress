@@ -73,6 +73,12 @@
   margin: 0 auto;
 }
 
+.my_height_show {
+  background-color: rgba(255, 228, 196, 0.7);
+  border-radius: 15px;
+  position: relative;
+}
+
 /*!
  * Bootstrap v4.6.1 (https://getbootstrap.com/)
  * Copyright 2011-2021 The Bootstrap Authors

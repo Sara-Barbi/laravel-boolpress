@@ -2923,75 +2923,66 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "containerr" }, [
-    _vm._v("azzo\n      "),
-    _c(
-      "div",
-      { staticClass: "row justify-content-around flex-wrap p-relative" },
-      [
-        _c("div", { staticClass: "my_height col-3 m-3 text-center" }, [
-          _c("h1", { staticClass: "mt-5 mb-4" }, [
-            _vm._v(_vm._s(_vm.post.title)),
-          ]),
+  return _c("div", { staticClass: "container text-center" }, [
+    _c("div", { staticClass: "row justify-content-center" }, [
+      _c("div", { staticClass: "col-10 back_show" }, [
+        _c("h1", { staticClass: "mt-5 mb-4" }, [
+          _vm._v(_vm._s(_vm.post.title)),
+        ]),
+        _vm._v(" "),
+        _vm.post.category
+          ? _c("div", [_vm._v(_vm._s(_vm.post.category.name))])
+          : _vm._e(),
+        _vm._v(" "),
+        _c("div", { staticClass: "col-12 mt-5 mb-5" }, [
+          _c("img", {
+            staticClass: "w-100",
+            attrs: { src: _vm.post.img, alt: "" },
+          }),
+        ]),
+        _vm._v(" "),
+        _vm.post.tags.length > 0
+          ? _c(
+              "span",
+              { staticClass: "mb-4 tags" },
+              _vm._l(_vm.post.tags, function (tag, index) {
+                return _c("span", { key: index, staticClass: "tag" }, [
+                  _vm._v(
+                    "\n                    " +
+                      _vm._s(tag.name) +
+                      "\n                "
+                  ),
+                ])
+              }),
+              0
+            )
+          : _vm._e(),
+        _vm._v(" "),
+        _c("p", [
+          _c("strong", { staticClass: "info_smart" }, [_vm._v("ingredients:")]),
+          _vm._v(" " + _vm._s(_vm.post.ingredients)),
+        ]),
+        _vm._v(" "),
+        _c("ul", { staticClass: "p-0" }, [
+          _c("strong", { staticClass: "info_smart" }, [_vm._v("Description:")]),
           _vm._v(" "),
-          _vm.post.category
-            ? _c("div", [_vm._v(_vm._s(_vm.post.category.name))])
-            : _vm._e(),
-          _vm._v(" "),
-          _c("div", { staticClass: "col-12 mt-5 mb-5" }, [
-            _c("img", {
-              staticClass: "w-100 product_img",
-              attrs: { src: _vm.post.img, alt: "" },
-            }),
-          ]),
-          _vm._v(" "),
-          _vm.post.tags.length > 0
-            ? _c(
-                "span",
-                { staticClass: "mb-4 tags" },
-                _vm._l(_vm.post.tags, function (tag, index) {
-                  return _c("span", { key: index, staticClass: "tag" }, [
-                    _vm._v(
-                      "\n                      " +
-                        _vm._s(tag.name) +
-                        "\n                  "
-                    ),
-                  ])
-                }),
-                0
-              )
-            : _vm._e(),
-          _vm._v(" "),
-          _c("p", [
-            _c("strong", { staticClass: "info_smart" }, [
-              _vm._v("ingredients:"),
-            ]),
-            _vm._v(" " + _vm._s(_vm.post.ingredients)),
-          ]),
-          _vm._v(" "),
-          _c("ul", { staticClass: "p-0" }, [
-            _c("strong", { staticClass: "info_smart" }, [
-              _vm._v("Description:"),
-            ]),
-            _vm._v(" "),
-            _c("li", [
-              _vm._v(
-                "\n                      " +
-                  _vm._s(_vm.post.content) +
-                  "\n                  "
-              ),
-            ]),
-          ]),
-          _vm._v(" "),
-          _c("p", [
-            _c("strong", { staticClass: "info_smart" }, [
-              _vm._v("Time Cooking:"),
-            ]),
-            _vm._v(" " + _vm._s(_vm.post.time_cooking)),
+          _c("li", [
+            _vm._v(
+              "\n                    " +
+                _vm._s(_vm.post.content) +
+                "\n                "
+            ),
           ]),
         ]),
-      ]
-    ),
+        _vm._v(" "),
+        _c("p", [
+          _c("strong", { staticClass: "info_smart" }, [
+            _vm._v("Time Cooking:"),
+          ]),
+          _vm._v(" " + _vm._s(_vm.post.time_cooking)),
+        ]),
+      ]),
+    ]),
   ])
 }
 var staticRenderFns = []
