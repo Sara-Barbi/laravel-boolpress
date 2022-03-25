@@ -30,7 +30,7 @@ export default {
     name:"SinglePost",
     data(){
         return{
-            posts:{}               //deve ritornare un oggetto
+            post:{}               //deve ritornare un oggetto
         }
     } ,
     created(){
