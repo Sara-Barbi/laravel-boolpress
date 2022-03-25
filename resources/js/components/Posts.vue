@@ -20,9 +20,9 @@
                     </li>
                 </ul>
                 <p><strong class="info_smart">Time Cooking:</strong> {{post.time_cooking}}</p>  
-                <!--link per la rotta del singolo post-->
+               <!--link per la rotta del singolo post-->
+               <button><router-link :to="{name:'single-post',params:{slug:post.slug}}">Visualizza la Ricetta</router-link></button>
             </div>
-               
         </div>
     </div>
 </template>

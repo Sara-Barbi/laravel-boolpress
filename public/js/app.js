@@ -84,20 +84,8 @@
 /******/ 	return __webpack_require__(__webpack_require__.s = 0);
 /******/ })
 /************************************************************************/
-/******/ ({
-
-/***/ "./resources/sass/app.scss":
-/*!*********************************!*\
-  !*** ./resources/sass/app.scss ***!
-  \*********************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-
-/***/ 0:
+/******/ ([
+/* 0 */
 /*!*************************************************************!*\
   !*** multi ./resources/js/app.js ./resources/sass/app.scss ***!
   \*************************************************************/
@@ -105,9 +93,8 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 !(function webpackMissingModule() { var e = new Error("Cannot find module 'C:\\Users\\sarab\\OneDrive\\Desktop\\BOOLEAN\\laravel-boolpress\\resources\\js\\app.js'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
-module.exports = __webpack_require__(/*! C:\Users\sarab\OneDrive\Desktop\BOOLEAN\laravel-boolpress\resources\sass\app.scss */"./resources/sass/app.scss");
+!(function webpackMissingModule() { var e = new Error("Cannot find module 'C:\\Users\\sarab\\OneDrive\\Desktop\\BOOLEAN\\laravel-boolpress\\resources\\sass\\app.scss'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
 
 
 /***/ })
-
-/******/ });
+/******/ ]);

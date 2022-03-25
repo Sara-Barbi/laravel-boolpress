@@ -27,7 +27,7 @@
 
 <script>
 export default {
-    name:"Main",
+    name:"SinglePost",
     data(){
         return{
             posts:{}               //deve ritornare un oggetto
@@ -35,7 +35,7 @@ export default {
     } ,
     created(){
         axios                     //la chiamata axios avviene per verificare lo slug del singolo elemento
-        .get("/api/posts")
+        .get(`/api/posts/${$this.$route.params.slug}`)    //il collegamento lo vediamo da ispeziona nel browser
         .then((apirisp)=>{
             this.post= apirisp.data;
         })
