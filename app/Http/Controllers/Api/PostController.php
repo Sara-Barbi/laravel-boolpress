@@ -47,7 +47,7 @@ class PostController extends Controller
    public function show($slug){
       //RICHIAMO POST che hanno uno slug (in teoria tutti) con all'interno category e tags,(come in index),prendi il primo (quello cliccato)
    
-      $posts = Post::where("slug",$slug)->with(['category', 'tags'])->first();
+      $post = Post::where("slug",$slug)->with(['category', 'tags'])->first();
       return response()->json($post);                                            //dai come risultato un formato json
 }
    
