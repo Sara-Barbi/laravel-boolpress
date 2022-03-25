@@ -5,6 +5,7 @@ Vue.use(VueRouter);
 
 import Home from "./pages/Home";
 import About from "./pages/About";
+import SinglePost from "./pages/SinglePost";
 
 const router = new VueRouter({
     mode: "history",
@@ -26,5 +27,7 @@ const router = new VueRouter({
         },
     ]
 });
+axios
+.get(`/api/posts/${this.$route.params.slug}`);
 
 export default router

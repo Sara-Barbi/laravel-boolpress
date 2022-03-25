@@ -34,7 +34,7 @@ export default {
         }
     } ,
     created(){
-        axios                     //la chiamata axios avviene per verificare lo slug del singolo elemento
+        axios                                              //la chiamata axios avviene per verificare lo slug del singolo elemento
         .get(`/api/posts/${$this.$route.params.slug}`)    //il collegamento lo vediamo da ispeziona nel browser
         .then((apirisp)=>{
             this.post= apirisp.data;
