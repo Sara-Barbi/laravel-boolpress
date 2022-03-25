@@ -2152,7 +2152,7 @@ __webpack_require__.r(__webpack_exports__);
     var _this = this;
 
     axios //la chiamata axios avviene per verificare lo slug del singolo elemento
-    .get("/api/posts/".concat($this.$route.params.slug)) //il collegamento lo vediamo da ispeziona nel browser
+    .get("/api/posts/".concat(this.$route.params.slug)) //il collegamento lo vediamo da ispeziona nel browser   this senza$
     .then(function (apirisp) {
       _this.post = apirisp.data;
     });
@@ -2834,9 +2834,15 @@ var render = function () {
             _c(
               "li",
               [
-                _c("router-link", { attrs: { to: { name: "home" } } }, [
-                  _vm._v("home"),
-                ]),
+                _c(
+                  "router-link",
+                  {
+                    attrs: {
+                      to: { name: "single-post", params: { slug: post.slug } },
+                    },
+                  },
+                  [_vm._v("Visualizza la Ricetta")]
+                ),
               ],
               1
             ),
@@ -2918,6 +2924,7 @@ var render = function () {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "containerr" }, [
+    _vm._v("azzo\n      "),
     _c(
       "div",
       { staticClass: "row justify-content-around flex-wrap p-relative" },

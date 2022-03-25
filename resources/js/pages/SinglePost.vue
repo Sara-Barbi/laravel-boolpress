@@ -1,5 +1,5 @@
 <template>
-  <div class="containerr">
+  <div class="containerr">azzo
         <div class="row justify-content-around flex-wrap p-relative">
             <div class="my_height col-3 m-3 text-center">
                 <h1 class="mt-5 mb-4">{{post.title}}</h1>
@@ -30,12 +30,12 @@ export default {
     name:"SinglePost",
     data(){
         return{
-            post:{}               //deve ritornare un oggetto
+            post:{},               //deve ritornare un oggetto
         }
     } ,
     created(){
         axios                                              //la chiamata axios avviene per verificare lo slug del singolo elemento
-        .get(`/api/posts/${$this.$route.params.slug}`)    //il collegamento lo vediamo da ispeziona nel browser
+        .get(`/api/posts/${this.$route.params.slug}`)    //il collegamento lo vediamo da ispeziona nel browser   this senza$
         .then((apirisp)=>{
             this.post= apirisp.data;
         })

@@ -21,7 +21,7 @@
                 </ul>
                 <p><strong class="info_smart">Time Cooking:</strong> {{post.time_cooking}}</p>  
                <!--link per la rotta del singolo post-->
-               <li><router-link :to="{ name: 'home' }">home</router-link></li>
+             <li><router-link :to="{ name: 'single-post', params:{slug: post.slug} }">Visualizza la Ricetta</router-link></li>
             </div>
         </div>
     </div>
