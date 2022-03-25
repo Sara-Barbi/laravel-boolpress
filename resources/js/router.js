@@ -19,6 +19,11 @@ const router = new VueRouter({
             name: "about",
             component: About
         },
+        {
+            path: "/posts/:slug",  //per lo show
+            name: "single-post",
+            component: SinglePost
+        },
     ]
 });
 
