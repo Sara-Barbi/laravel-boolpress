@@ -1,13 +1,13 @@
 <template>
     <div class="container text-center">
         <div class="row justify-content-center">
-            <div class="col-10 back_show">
+            <div class="col-10 back_show ">
                 <h1 class="mt-5 mb-4">{{post.title}}</h1>
                 <div v-if="post.category">{{post.category.name}}</div>
-                <div class="col-12 mt-5 mb-5">
-                    <img class="w-100" :src="post.img" alt="">
+                <div class="d-flex justify-content-center mt-5 mb-5">
+                    <img class="col-9" :src="post.img" alt="">
                 </div>
-                <span class="mb-4 tags" v-if="post.tags.length > 0">
+                <span class="mb-4 tags" v-if="post.tags">
                     <span class="tag" v-for="(tag,index) in post.tags" :key="index">
                         {{tag.name}}
                     </span>

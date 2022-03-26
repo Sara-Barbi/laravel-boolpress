@@ -1,27 +1,29 @@
 <template>
   <div class="containerr">
         <div class="row justify-content-around flex-wrap p-relative">
-            <div class="my_height col-3 m-3 text-center " v-for="(post,index) in posts" :key="index">
-                <h1 class="mt-5 mb-4">{{post.title}}</h1>
-                <div>{{post.category.name}}</div>
-                <div class="col-12 mt-5 mb-5">
-                    <img class="w-100 product_img" :src="post.img" alt="">
-                </div>
-                <span class="mb-4 tags">
-                    <span class="tag" v-for="tag in post.tags" :key="tag.slug">
-                        {{tag.name}}
+            <div v-for="post in posts" :key="post.slug" class="col-4 gxy-3 text-center">
+                <div class="my_height">
+                    <h1 class="mt-5 mb-4">{{post.title}}</h1>
+                    <div v-if="post.category">{{post.category.name}}</div>
+                    <div class="col-12 mt-5 mb-5">
+                        <img class="w-100 product_img" :src="post.img" alt="">
+                    </div>
+                    <span class="mb-4 tags">
+                        <span class="tag" v-for="tag in post.tags" :key="tag.slug">
+                            {{tag.name}}
+                        </span>
                     </span>
-                </span>
-                <p><strong class="info_smart">ingredients:</strong> {{post.ingredients}}</p>
-                <ul class="p-0">
-                    <strong class="info_smart">Description:</strong> 
-                    <li>
-                        {{post.content}}
-                    </li>
-                </ul>
-                <p><strong class="info_smart">Time Cooking:</strong> {{post.time_cooking}}</p>  
-               <!--link per la rotta del singolo post-->
-             <li><router-link :to="{ name: 'single-post', params:{slug: post.slug} }">Visualizza la Ricetta</router-link></li>
+                    <p><strong class="info_smart">ingredients:</strong> {{post.ingredients}}</p>
+                    <ul class="p-0">
+                        <strong class="info_smart">Description:</strong> 
+                        <li>
+                            {{post.content}}
+                        </li>
+                    </ul>
+                    <p><strong class="info_smart">Time Cooking:</strong> {{post.time_cooking}}</p>  
+                </div>
+                <!--link per la rotta del singolo post-->
+                <button class="m-3"><router-link :to="{ name: 'single-post', params:{slug: post.slug} }">Visualizza la Ricetta</router-link></button>
             </div>
         </div>
     </div>
