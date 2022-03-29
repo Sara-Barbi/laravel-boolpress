@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="my_overapp">
         <Header/>
         <Main/>
         <Footer/>

@@ -1,6 +1,6 @@
 <template>
-  <div>
-    Home
+  <div class="my_mt text-center">
+    <h1 class="m-3">HOME</h1>
     <Posts/>
   </div>
 </template>
@@ -16,6 +16,13 @@ export default {
 }
 </script>
 
-<style>
+<style lang='scss' scoped>
+h1{
+    color: white;
+}
+.my_mt{
+  margin-top: 60px;
+  padding-top:20px;
+}
 
 </style>
