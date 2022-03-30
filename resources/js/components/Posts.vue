@@ -48,7 +48,7 @@ export default {
 
 </script>
 
-<style lang='scss' scoped>
+<style lang='scss' >
 .button_show{
     background-image: url('https://media.leroymerlin.it/media/233616/.jpg?width=650&height=650&format=jpg&quality=80&fit=bounds');
     background-size:cover ;
