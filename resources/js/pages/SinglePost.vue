@@ -1,5 +1,5 @@
 <template>
-    <div class="container text-center">
+    <div class="container text-center mt-5 pt-5">
         <div class="row justify-content-center">
             <div class="col-10 back_show ">
                 <h1 class="mt-5 mb-4">{{post.title}}</h1>

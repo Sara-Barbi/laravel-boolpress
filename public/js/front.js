@@ -3741,7 +3741,7 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "container text-center" }, [
+  return _c("div", { staticClass: "container text-center mt-5 pt-5" }, [
     _c("div", { staticClass: "row justify-content-center" }, [
       _c("div", { staticClass: "col-10 back_show " }, [
         _c("h1", { staticClass: "mt-5 mb-4" }, [
