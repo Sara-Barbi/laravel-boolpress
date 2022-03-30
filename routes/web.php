@@ -22,6 +22,7 @@ Route::middleware('auth')   //solo se utente è loggato
 ->group(function () {
     Route::get('/', 'HomeController@index')->name('home');  // get( /, PostController@index)->name('index');
     Route::resource('/posts','PostController');             // get( /altro, PostController@index)->name('altro');
+    Route::resource('/categories','CategoryController');             // get( /altro, PostController@index)->name('altro');
 });
 
 //indirizzare sempre sul front

@@ -3,6 +3,7 @@
        <nav class="nav d-flex justify-content-center align-items-center  my_nav">
         <a class="nav-link" href="#"><router-link :to="{ name: 'home' }">home</router-link></a>
         <a class="nav-link" href="#"><router-link :to="{ name: 'about' }">about us</router-link></a>
+        <a class="nav-link" href="#"><router-link :to="{ name: 'categories' }">Categories</router-link></a>
       </nav>
    </header>
 </template>

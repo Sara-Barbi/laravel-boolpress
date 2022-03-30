@@ -25,6 +25,9 @@ Route::get('/posts',"Api\PostController@index");                                
 Route::namespace('Api')->name('api.')->group(function(){
      Route::get("/posts","PostController@index")->name('posts');
      Route::get("/posts/{slug}","PostController@show")->name('posts.show');       //per la rotta /posts/{slug}  mostrami posts.show e prendi i dati dal PostController@show 
+     Route::get("/categories","CategoryController@index")->name('categories');    //è lo stesso identico procedimento che abbiamo gfatto per i posts
+     Route::get("/categories/{slug}","CategoryController@show")->name('categories.show'); 
+
 });
 //---------------------per richiesta spefifica categoria 
 
