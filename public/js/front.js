@@ -3884,16 +3884,30 @@ var render = function () {
   var _c = _vm._self._c || _h
   return _c(
     "div",
-    { staticClass: "container-grid" },
+    { staticClass: "container-grid mt-5 pt-5" },
     [
       _c("h1", { staticClass: "titleCateg" }, [
         _vm._v(_vm._s(_vm.category.name)),
       ]),
       _vm._v(" "),
       _vm._l(_vm.category.posts, function (post) {
-        return _c("div", { key: post.slug }, [
-          _vm._v("\n          " + _vm._s(post.title) + "\n          \n      "),
-        ])
+        return _c(
+          "div",
+          { key: post.slug },
+          [
+            _vm._v("\n          " + _vm._s(post.title) + "\n         "),
+            _c(
+              "router-link",
+              {
+                attrs: {
+                  to: { name: "single-post", params: { slug: post.slug } },
+                },
+              },
+              [_vm._v("Visualizza Post")]
+            ),
+          ],
+          1
+        )
       }),
     ],
     2
