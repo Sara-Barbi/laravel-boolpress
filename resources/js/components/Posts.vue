@@ -54,7 +54,7 @@ export default {
     background-size:cover ;
     border-radius: 10px;
     a{
-        color: rgb(169, 169, 169);
+        color: rgb(196, 191, 191);
         font-weight: 900;
     }
 }

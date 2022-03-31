@@ -4,7 +4,7 @@
         <div v-for="post in category.posts" :key="post.slug" class="text-center">
             <h4 class="tit_pos">{{post.title}}</h4>
             <img class="post_preview" :src="post.img" alt="">
-            <button class="m-3 button_show pt-2 pb-2 ps-1 pe-1"><router-link :to="{name:'single-post',params:{slug: post.slug}}">Visualizza Post</router-link></button>
+            <router-link :to="{name:'single-post',params:{slug: post.slug}}"> <button class="m-3 button_show pt-2 pb-2 ps-1 pe-1">Visualizza Post</button></router-link>
         </div>
   </div>
 </template>

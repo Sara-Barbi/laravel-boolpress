@@ -2,7 +2,7 @@
   <div class="container my_margin text-center mt-5 pt-5">
       <div v-for="category in categories" :key="category.slug" class="d-flex flex-column align-items-center mt-3">
            <div class="titleCateg tit-wid">{{category.name}}</div>
-           <button class="m-3 button_show pt-2 pb-2 ps-1 pe-1"><router-link :to="{name:'single-category',params:{slug: category.slug}}">Visualizza Categoria</router-link></button>
+           <router-link :to="{name:'single-category',params:{slug: category.slug}}"><button class="m-3 button_show pt-2 pb-2 ps-1 pe-1">Visualizza Categoria</button></router-link>
       </div>
   </div>
 </template>

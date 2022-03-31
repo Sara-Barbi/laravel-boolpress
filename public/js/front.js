@@ -2291,7 +2291,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".button_show {\n  background-image: url(\"https://media.leroymerlin.it/media/233616/.jpg?width=650&height=650&format=jpg&quality=80&fit=bounds\");\n  background-size: cover;\n  border-radius: 10px;\n}\n.button_show a {\n  color: darkgray;\n  font-weight: 900;\n}", ""]);
+exports.push([module.i, ".button_show {\n  background-image: url(\"https://media.leroymerlin.it/media/233616/.jpg?width=650&height=650&format=jpg&quality=80&fit=bounds\");\n  background-size: cover;\n  border-radius: 10px;\n}\n.button_show a {\n  color: #c4bfbf;\n  font-weight: 900;\n}", ""]);
 
 // exports
 
@@ -3643,7 +3643,7 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", [_vm._v("\n    Footer\n")])
+  return _c("div")
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -3911,25 +3911,25 @@ var render = function () {
           ]),
           _vm._v(" "),
           _c(
-            "button",
-            { staticClass: "m-3 button_show pt-2 pb-2 ps-1 pe-1" },
+            "router-link",
+            {
+              attrs: {
+                to: {
+                  name: "single-category",
+                  params: { slug: category.slug },
+                },
+              },
+            },
             [
               _c(
-                "router-link",
-                {
-                  attrs: {
-                    to: {
-                      name: "single-category",
-                      params: { slug: category.slug },
-                    },
-                  },
-                },
+                "button",
+                { staticClass: "m-3 button_show pt-2 pb-2 ps-1 pe-1" },
                 [_vm._v("Visualizza Categoria")]
               ),
-            ],
-            1
+            ]
           ),
-        ]
+        ],
+        1
       )
     }),
     0
@@ -3999,31 +3999,35 @@ var render = function () {
       ]),
       _vm._v(" "),
       _vm._l(_vm.category.posts, function (post) {
-        return _c("div", { key: post.slug, staticClass: "text-center" }, [
-          _c("h4", { staticClass: "tit_pos" }, [_vm._v(_vm._s(post.title))]),
-          _vm._v(" "),
-          _c("img", {
-            staticClass: "post_preview",
-            attrs: { src: post.img, alt: "" },
-          }),
-          _vm._v(" "),
-          _c(
-            "button",
-            { staticClass: "m-3 button_show pt-2 pb-2 ps-1 pe-1" },
-            [
-              _c(
-                "router-link",
-                {
-                  attrs: {
-                    to: { name: "single-post", params: { slug: post.slug } },
-                  },
+        return _c(
+          "div",
+          { key: post.slug, staticClass: "text-center" },
+          [
+            _c("h4", { staticClass: "tit_pos" }, [_vm._v(_vm._s(post.title))]),
+            _vm._v(" "),
+            _c("img", {
+              staticClass: "post_preview",
+              attrs: { src: post.img, alt: "" },
+            }),
+            _vm._v(" "),
+            _c(
+              "router-link",
+              {
+                attrs: {
+                  to: { name: "single-post", params: { slug: post.slug } },
                 },
-                [_vm._v("Visualizza Post")]
-              ),
-            ],
-            1
-          ),
-        ])
+              },
+              [
+                _c(
+                  "button",
+                  { staticClass: "m-3 button_show pt-2 pb-2 ps-1 pe-1" },
+                  [_vm._v("Visualizza Post")]
+                ),
+              ]
+            ),
+          ],
+          1
+        )
       }),
     ],
     2
